@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Welcome</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #4facfe, #00f2fe);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.2em;
+        margin-bottom: 40px;
+      }
+
+      .btn {
+        background-color: #ffffff;
+        color: #0077b6;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #e0e0e0;
+      }
+    </style>
+    <script>
+      setTimeout(() => {
+        window.location.href = "/main";
+      }, 5000); // Redirect in 5 seconds
+    </script>
+  </head>
+  <body>
+    <h1>Welcome to the Skin Cancer Detector</h1>
+    <p>We care about your health. Let’s detect skin conditions with AI 🔬</p>
+    <a class="btn" href="/main">Skip Intro</a>
+  </body>
+</html>

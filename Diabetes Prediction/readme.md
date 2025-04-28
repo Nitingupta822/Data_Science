@@ -41,15 +41,19 @@ This project presents a Diabetes Prediction Web Application that uses a machine 
 - Process:
    Data Loading and Preprocessing:
       The dataset was loaded using pandas, and split into features (X) and target (y).
+  
    Train-Test Split:
       Data was split into 80% training and 20% testing using train_test_split from scikit-learn, ensuring randomization with a fixed random_state (42).
+  
    Model Building:
       A Random Forest Classifier was used with:
         n_estimators=100 (100 trees)
         max_depth=5 (to prevent overfitting)
         random_state=42 (for reproducibility)
+  
   Model Training:
      The model was trained on the training set.
+  
   Model Saving:
      The trained model was serialized and saved as diabetes_model.pkl using pickle for later use in the Flask app.
 ---

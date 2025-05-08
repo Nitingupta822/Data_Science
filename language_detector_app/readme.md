@@ -23,36 +23,42 @@ Deploy the system locally for demonstration purposes.
 
 - Source: A custom CSV file (language.csv) is used.
 - Features:
+
    Text: Input sentence or phrase.
+  
    Language: Target output (language label).
-- Sample Data:
-   mathematica
-   Copy
-   Edit
-   Text,Language
-   Bonjour, French
-   Hello, English
-   Hola, Spanish
+  
   
 ## 🧠 4. Machine Learning Model
 
 - 4.1 Data Preprocessing
+  
    Convert textual data into numerical vectors using CountVectorizer.
+  
    Split dataset into training and testing sets using train_test_split.
 
 - 4.2 Model Selection
+  
    Model Used: Multinomial Naive Bayes
+  
    Reason: Performs well on text classification tasks involving word frequency counts.
 
 - 4.3 Model Training
+  
    cv = CountVectorizer()
+  
    X = cv.fit_transform(x)
+  
    x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
+  
    model = MultinomialNB()
+  
    model.fit(x_train, y_train)
   
 ## 4.4 Model Accuracy
+
     Evaluated using .score() method.
+    
     Accuracy typically exceeds 95% depending on dataset size and diversity.
 
 --- 
@@ -60,26 +66,39 @@ Deploy the system locally for demonstration purposes.
 ## 🌐 5. Web Application (Flask)
 
 - 5.1 Overview
+  
    A Flask-based web application provides a graphical user interface (GUI) for users to interact with the language detection system.
 
 - 5.2 Features
+  
    Text input field for user sentence.
+  
    "Detect Language" button to submit input.
+  
     Real-time prediction display.
 
 - 5.3 Flask Backend (app.py)
+  
    Handles:
+  
    Model loading and prediction logic.
+  
    Routes for rendering HTML templates and processing form data.
 
 - 5.4 HTML Template (index.html)
+  
    Provides:
+  
    Simple and clean UI using HTML and styled with CSS.
-  Responsive layout for better user experience.
+  
+   Responsive layout for better user experience.
 
 5.5 CSS Styling (style.css)
+
 Implements:
+
 Modern layout with card-based design.
+
 Styled form, buttons, and result box for better readability.
 
 ---
